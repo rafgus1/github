@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var i = 0
     var body: some View {
         VStack {
-            Text("Rafał")
+            Text("Liczba kliknięć przycisku = \(i)")
                 .padding()
-            Button(action: {}){
+            Button(action: {i += 1}){
             Text("Kliknij mnie!")
                     .frame(width: 100, height: 70)
+                    .padding()
                     .foregroundColor(.white)
                     .background(.blue)
             }
